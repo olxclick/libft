@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbranco- <jbranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbranco- <jbranco-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 13:25:52 by jbranco-          #+#    #+#             */
-/*   Updated: 2022/11/21 18:12:39 by jbranco-         ###   ########.fr       */
+/*   Updated: 2023/07/26 15:56:44 by jbranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,16 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*new;
-	size_t		i;
-	size_t		j;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
 
-	i = 0;
-	j = 0;
-	new = malloc(len + 1 * sizeof(char));
-	if (!new)
+	if (!s || !(new_str = (char *)malloc(len + 1)))
 		return (0);
-	while (s[i] != '\0')
-	{
-		if (i >= start && j < len)
-		{
-			new[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	new[j] = '\0';
-	return (new);
+	i = start;
+	j = 0;
+	while (i < ft_strlen((char *)s) && j < len)
+		new_str[j++] = s[i++];
+	new_str[j] = '\0';
+	return (new_str);
 }
-/*
-int main()
-{
-	printf("%s", ft_substr("miaaaau", 2, 3));
-}*/

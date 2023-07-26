@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbranco- <jbranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbranco- <jbranco-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:58:05 by jbranco-          #+#    #+#             */
-/*   Updated: 2022/11/25 16:53:22 by jbranco-         ###   ########.fr       */
+/*   Updated: 2023/07/26 15:26:22 by jbranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 int		ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
+
+int	ft_strcmp(const char *s1, const char *s2);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 
